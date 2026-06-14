@@ -1,0 +1,38 @@
+[sqlfluff]
+dialect = tsql
+templater = jinja
+max_line_length = 120
+exclude_rules = LT12
+
+[sqlfluff:indentation]
+indent_unit = space
+tab_space_size = 4
+implicit_indents = forbid
+
+[sqlfluff:rules:capitalisation.keywords]
+capitalisation_policy = upper
+
+[sqlfluff:rules:capitalisation.identifiers]
+capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.functions]
+extended_capitalisation_policy = upper
+
+[sqlfluff:rules:layout.select_targets]
+line_position = below
+
+[sqlfluff:rules:layout.commas]
+line_position = trailing
+
+[sqlfluff:rules:layout.spacing]
+single_space = true
+
+[sqlfluff:rules:aliasing.table]
+require_as = true
+require_alias = true
+
+[sqlfluff:rules:aliasing.column]
+require_alias = false
+
+[sqlfluff:rules:layout.keyword_newline]
+ignore_words = limit
