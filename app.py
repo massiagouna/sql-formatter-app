@@ -15,7 +15,36 @@ from sql_format_agent import CONFIG_PATH, format_sql, lint_sql
 st.set_page_config(page_title="Formateur SQL", page_icon="🧹", layout="wide")
 
 st.markdown(
-    "<div style='text-align: center; font-size: 80px;'>🤖🧹</div>",
+    """
+    <style>
+    .cleaning-bot {
+        text-align: center;
+        font-size: 80px;
+        position: relative;
+        height: 110px;
+    }
+    .dust {
+        position: absolute;
+        font-size: 28px;
+        opacity: 0;
+        animation: dust-puff 1.8s ease-out infinite;
+    }
+    .dust:nth-child(2) { left: 58%; top: 30px; animation-delay: 0s; }
+    .dust:nth-child(3) { left: 65%; top: 35px; animation-delay: 0.6s; }
+    .dust:nth-child(4) { left: 72%; top: 28px; animation-delay: 1.2s; }
+    @keyframes dust-puff {
+        0%   { opacity: 0; transform: translate(0, 0) scale(0.6); }
+        20%  { opacity: 1; }
+        100% { opacity: 0; transform: translate(40px, -50px) scale(1.3); }
+    }
+    </style>
+    <div class="cleaning-bot">
+        🤖🧹
+        <span class="dust">✨</span>
+        <span class="dust">💨</span>
+        <span class="dust">✨</span>
+    </div>
+    """,
     unsafe_allow_html=True,
 )
 
