@@ -12,7 +12,12 @@ import streamlit as st
 
 from sql_format_agent import CONFIG_PATH, format_sql, lint_sql
 
-st.set_page_config(page_title="Formateur SQL", page_icon="🛠️", layout="wide")
+st.set_page_config(page_title="Formateur SQL", page_icon="🧹", layout="wide")
+
+st.markdown(
+    "<div style='text-align: center; font-size: 80px;'>🤖🧹</div>",
+    unsafe_allow_html=True,
+)
 
 st.title("🛠️ Formateur SQL")
 st.caption("Corrige automatiquement ton code SQL selon les normes de l'equipe (sqlfluff).")
